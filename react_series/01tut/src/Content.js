@@ -3,7 +3,7 @@ import ItemList from "./ItemList";
 
 const Content = ({items, handleCheck, handleDelete }) => {
     return (
-        <main>
+        <>
             {items.length ? (
                 <ItemList
                     items={items}
@@ -13,7 +13,7 @@ const Content = ({items, handleCheck, handleDelete }) => {
             ) : (
                 <h1>List is Emptay !!! :)</h1>
             )}
-        </main>
+        </>
     )
 }
 export default Content
