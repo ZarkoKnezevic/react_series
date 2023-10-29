@@ -20,11 +20,10 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
   width: 100%;
-  max-width: 500px;
   /*border: 1px solid mediumblue;*/
   margin: auto;
 }
@@ -60,12 +59,12 @@ footer {
 
 ul {
   width: 100%;
-  list-style: none;
-  padding: 0 0.25rem 0.25rem;
+  /*list-style: none;*/
+  padding: 0 1.25rem 0.25rem;
 }
 
 ul li::before {
-  content: "\200B";
+  /*content: "\200B";*/
 }
 
 .item {
@@ -145,20 +144,11 @@ ul li::before {
 button {
   height: 48px;
   min-width: 48px;
-  border-radius: 0.25rem;
   padding: 0.5rem;
   font-size: 1rem;
-  background-color: aliceblue;
-  color: mediumblue;
   cursor: pointer;
 }
 
-button:focus,
-button:hover {
-  color: white;
-  background-color: limegreen;
-  outline: none;
-}
 
 .searchForm {
   width: 100%;
@@ -233,4 +223,29 @@ button:hover {
 .changeColor input:focus {
   outline: none;
   border-color: rgba(100, 100, 111, 0.75);
+}
+
+.buttonContainer {
+  display: flex;
+  width: 100%;
+}
+
+.btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: lightblue;
+  border: 1px solid black;
+  border-left: none;
+}
+
+.btn:first-child {
+  border-left: 1px solid black;
+}
+
+.btn--active {
+  color: white;
+  background-color: black;
 }
